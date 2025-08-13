@@ -3,243 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nexa Creative Studio - Branding, diseño web y estrategias creativas para impulsar tu marca.">
+    <meta name="description" content="Nexa Creative Studio - Branding, diseño y creatividad para marcas modernas.">
     <title>Nexa Creative Studio</title>
-    <style>
-        /* ====== RESET BÁSICO ====== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #222;
-            background-color: #f8f8f8;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* ====== HEADER ====== */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: white;
-            border-bottom: 1px solid #ddd;
-            z-index: 1000;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #222;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-
-        nav a {
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ff4d4d;
-        }
-
-        /* ====== HERO ====== */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(to right, #111, #333);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            background: #ff4d4d;
-            padding: 0.8rem 1.5rem;
-            color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #e13b3b;
-        }
-
-        /* ====== SECCIONES ====== */
-        section {
-            padding: 5rem 0;
-        }
-
-        section h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        section h2::after {
-            content: "";
-            width: 60px;
-            height: 4px;
-            background: #ff4d4d;
-            display: block;
-            margin: 0.5rem auto 0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* ====== FOOTER ====== */
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header class="header">
         <div class="container">
-            <div class="logo">Nexa</div>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#planes">Planes</a></li>
-                    <li><a href="#metodologia">Metodología</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
+            <div class="logo">NEXA</div>
+            <nav class="nav" id="nav-menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
             </nav>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         </div>
     </header>
 
     <!-- HERO -->
-    <section class="hero" id="inicio">
-        <div>
-            <h1>Impulsa tu marca con creatividad</h1>
-            <p>Branding, diseño web y estrategias que conectan con tu audiencia.</p>
-            <a href="#servicios" class="btn">Nuestros servicios</a>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Queremos que hagas parte de esta experiencia única</h1>
+            <p>Branding, diseño web y estrategias creativas para marcas que quieren destacar.</p>
+            <a href="#contacto" class="btn">Comienza tu proyecto</a>
         </div>
     </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <div class="container grid">
-            <div class="card">
-                <h3>Branding</h3>
-                <p>Identidad visual sólida y coherente para tu marca.</p>
-            </div>
-            <div class="card">
-                <h3>Diseño Web</h3>
-                <p>Páginas profesionales con dominio incluido.</p>
-            </div>
-            <div class="card">
-                <h3>Marketing Digital</h3>
-                <p>Estrategias para aumentar tu visibilidad y ventas.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PLANES -->
-    <section id="planes">
-        <h2>Planes</h2>
-        <div class="container grid">
-            <div class="card">
-                <h3>Básico</h3>
-                <p>Landing page + dominio.</p>
-            </div>
-            <div class="card">
-                <h3>Profesional</h3>
-                <p>Sitio web completo con galería y blog.</p>
-            </div>
-            <div class="card">
-                <h3>Premium</h3>
-                <p>Diseño personalizado + SEO avanzado.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- METODOLOGÍA -->
-    <section id="metodologia">
-        <h2>Metodología</h2>
+    <section id="servicios" class="services">
         <div class="container">
-            <p>Trabajamos en 4 fases: investigación, diseño, desarrollo y lanzamiento. Cada proyecto se adapta a las necesidades del cliente.</p>
+            <h2>Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Branding</h3>
+                    <p>Construimos identidades visuales sólidas que conectan con tu audiencia.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Diseño Web</h3>
+                    <p>Diseños web adaptables y optimizados para ofrecer la mejor experiencia.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Marketing Creativo</h3>
+                    <p>Estrategias y contenido visual para potenciar tu marca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-card">Proyecto 1</div>
+                <div class="project-card">Proyecto 2</div>
+                <div class="project-card">Proyecto 3</div>
+            </div>
         </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto">
-        <h2>Contacto</h2>
+    <section id="contacto" class="contact">
         <div class="container">
-            <p>Escríbenos y hagamos realidad tu proyecto: <strong>contacto@nexa.com</strong></p>
+            <h2>Contáctanos</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Tu mensaje" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 Nexa Creative Studio - Todos los derechos reservados</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Nexa Creative Studio. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <!-- JS para menú móvil -->
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav-menu');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
 
 </body>
 </html>
